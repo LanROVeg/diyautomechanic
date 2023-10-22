@@ -1,20 +1,28 @@
 // app.js
-const carDropdown = document.getElementById('car-dropdown');
+const yearDropdown = document.getElementById('year');
+const makeDropdown = document.getElementById('make');
+const modelDropdown = document.getElementById('model');
+const trimDropdown = document.getElementById('trim');
+const engineDropdown = document.getElementById('engine');
 
-// Replace with your car data
-const carOptions = [
-    { make: 'Toyota', model: 'Camry' },
-    { make: 'Honda', model: 'Civic' },
-    // Add more car data here
-];
+// You should populate these dropdowns dynamically from your database
 
-carOptions.forEach(car => {
-    const option = document.createElement('option');
-    option.value = `${car.make} ${car.model}`;
-    option.text = `${car.make} ${car.model}`;
-    carDropdown.appendChild(option);
+yearDropdown.addEventListener('change', () => {
+    // Implement logic to filter makes based on the selected year
 });
 
-carDropdown.addEventListener('change', () => {
-    // Implement search functionality here
+makeDropdown.addEventListener('change', () => {
+    // Implement logic to filter models based on the selected make
+});
+
+modelDropdown.addEventListener('change', () => {
+    // Implement logic to filter trims based on the selected model
+});
+
+trimDropdown.addEventListener('change', () => {
+    // Implement logic to filter engines based on the selected trim
+});
+
+engineDropdown.addEventListener('change', () => {
+    // Implement the final search functionality here
 });
